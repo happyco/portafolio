@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<menu>
+		<form id="Menuprincipal" prompt="Menu Principal">
+			<form id="1" prompt="Data_1">
+				<form id="4" prompt="S1Data_1">
+					<oneof id="17" prompt="SS1Data_1">
+						<option text="1" value="1"/>
+						<option text="10" value="10"/>
+						<option text="20" value="20"/>
+						<option text="100" value="100"/>
+						<option text="500" value="500"/>
+						<option text="1000" value="1000"/>
+						<option text="5000" value="5000"/>
+						<option text="10000" value="10000"/>
+						<option text="Infinite" value="0"/>
+					</oneof>
+				</form>
+				<oneof id="5" prompt="S1Data_2">
+					<option text="1" value="1"/>
+					<option text="10" value="10"/>
+					<option text="20" value="20"/>
+					<option text="100" value="100"/>
+					<option text="500" value="500"/>
+					<option text="1000" value="1000"/>
+					<option text="5000" value="5000"/>
+					<option text="10000" value="10000"/>
+					<option text="Infinite" value="0"/>
+				</oneof>
+			</form>
+			<form id="2" prompt="Data_2">
+				<form id="6" prompt="S2Data_1">
+					<oneof id="50" prompt="SS2Data_1">
+						<option text="1" value="1"/>
+						<option text="10" value="10"/>
+						<option text="20" value="20"/>
+						<option text="100" value="100"/>
+						<option text="500" value="500"/>
+						<option text="1000" value="1000"/>
+						<option text="5000" value="5000"/>
+						<option text="10000" value="10000"/>
+						<option text="Infinite" value="0"/>
+					</oneof>
+				</form>
+				<oneof id="7" prompt="S2Data_2">
+					<option text="1" value="1"/>
+					<option text="10" value="10"/>
+					<option text="20" value="20"/>
+					<option text="100" value="100"/>
+					<option text="500" value="500"/>
+					<option text="1000" value="1000"/>
+					<option text="5000" value="5000"/>
+					<option text="10000" value="10000"/>
+					<option text="Infinite" value="0"/>
+				</oneof>
+			</form>
+			<form id="3" prompt="Data_3">
+				<form id="8" prompt="S3Data_1">
+					<oneof id="20" prompt="SS3Data_1">
+						<option text="1" value="1"/>
+						<option text="10" value="10"/>
+						<option text="20" value="20"/>
+						<option text="100" value="100"/>
+						<option text="500" value="500"/>
+						<option text="1000" value="1000"/>
+						<option text="5000" value="5000"/>
+						<option text="10000" value="10000"/>
+						<option text="Infinite" value="0"/>
+					</oneof>
+				</form>
+				<oneof id="9" prompt="S3Data_2">
+					<option text="1" value="1"/>
+					<option text="10" value="10"/>
+					<option text="20" value="20"/>
+					<option text="100" value="100"/>
+					<option text="500" value="500"/>
+					<option text="1000" value="1000"/>
+					<option text="5000" value="5000"/>
+					<option text="10000" value="10000"/>
+					<option text="Infinite" value="0"/>
+				</oneof>
+			</form>
+		</form>
+	</menu>

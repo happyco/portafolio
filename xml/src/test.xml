@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+		<form id="Menuprincipal" prompt="Menu Principal">
+			<goto help="Help1" id="1" prompt="Data_1"/>
+			<goto help="Help2" id="2" prompt="Data_2"/>
+			<goto help="Help3" id="3" prompt="Data_3"/>
+		</form>
+		<form id="1" prompt="Data_1">
+			<goto help="S1Help1" id="4" prompt="S1Data_1"/>
+			<oneof help="S1Help2" id="5" prompt="S1Data_2">
+				<option name="1" value="1"/>
+				<option name="10" value="10"/>
+				<option name="20" value="20"/>
+				<option name="100" value="100"/>
+				<option name="500" value="500"/>
+				<option name="1000" value="1000"/>
+				<option name="5000" value="5000"/>
+				<option name="10000" value="10000"/>
+				<option name="Infinite" value="0"/>
+			</oneof>
+		</form>
+		<form id="8" prompt="S3Data_1">
+			<oneof help="SS3Help1" id="20" prompt="SS3Data_1">
+				<option name="1" value="1"/>
+				<option name="10" value="10"/>
+				<option name="20" value="20"/>
+				<option name="100" value="100"/>
+				<option name="500" value="500"/>
+				<option name="1000" value="1000"/>
+				<option name="5000" value="5000"/>
+				<option name="10000" value="10000"/>
+				<option name="Infinite" value="0"/>
+			</oneof>
+		</form>
+		<form id="2" prompt="Data_2">
+			<goto help="S2Help1" id="6" prompt="S2Data_1"/>
+			<oneof help="S2Help2" id="7" prompt="S2Data_2">
+				<option name="1" value="1"/>
+				<option name="10" value="10"/>
+				<option name="20" value="20"/>
+				<option name="100" value="100"/>
+				<option name="500" value="500"/>
+				<option name="1000" value="1000"/>
+				<option name="5000" value="5000"/>
+				<option name="10000" value="10000"/>
+				<option name="Infinite" value="0"/>
+			</oneof>
+		</form>
+		<form id="4" prompt="S1Data_1">
+			<oneof help="SS1Help1" id="17" prompt="SS1Data_1">
+				<option name="1" value="1"/>
+				<option name="10" value="10"/>
+				<option name="20" value="20"/>
+				<option name="100" value="100"/>
+				<option name="500" value="500"/>
+				<option name="1000" value="1000"/>
+				<option name="5000" value="5000"/>
+				<option name="10000" value="10000"/>
+				<option name="Infinite" value="0"/>
+			</oneof>
+		</form>
+		<form id="3" prompt="Data_3">
+			<goto help="S3Help1" id="8" prompt="S3Data_1"/>
+			<oneof help="S3Help2" id="9" prompt="S3Data_2">
+				<option name="1" value="1"/>
+				<option name="10" value="10"/>
+				<option name="20" value="20"/>
+				<option name="100" value="100"/>
+				<option name="500" value="500"/>
+				<option name="1000" value="1000"/>
+				<option name="5000" value="5000"/>
+				<option name="10000" value="10000"/>
+				<option name="Infinite" value="0"/>
+			</oneof>
+		</form>
+		<form id="6" prompt="S2Data_1">
+			<oneof help="SS2Help1" id="50" prompt="SS2Data_1">
+				<option name="1" value="1"/>
+				<option name="10" value="10"/>
+				<option name="20" value="20"/>
+				<option name="100" value="100"/>
+				<option name="500" value="500"/>
+				<option name="1000" value="1000"/>
+				<option name="5000" value="5000"/>
+				<option name="10000" value="10000"/>
+				<option name="Infinite" value="0"/>
+			</oneof>
+		</form>
+</menu>
