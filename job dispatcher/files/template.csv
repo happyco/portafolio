@@ -1,0 +1,32 @@
+prueba,,,mycorreo@myempresa.com,,,,,,,
+nombre de la prueba,destino,script de la prueba,descripcion,param1,param2,param3,param4,param5,param6,param7
+test_001,comp1,login,loguear a la pagina,x,y,z,,,,
+test_002,comp1,login,loguear a la pagina,i,y,z,,,,
+test_003,comp1,login,loguear a la pagina,j,y,z,,,,
+test_004,comp1,login,loguear a la pagina,x,y,z,,,,
+test_005,comp2,login,loguear a la pagina,i,y,z,,,,
+test_006,comp3,login,loguear a la pagina,j,y,z,,,,
+test_007,comp4,openmail,,x,y,z,p,,,
+test_008,comp5,deletemail,,i,y,z,,g,,
+test_009,comp6,createmail,,j,y,z,,,a,
+test_010,comp7,cleartrash,,j,y,z,,,,a
+test_011,comp8,openmail,,x,y,z,p,,,
+test_012,comp3,deletemail,,i,y,z,,g,,
+test_013,comp8,createmail,,j,y,z,,,a,
+test_014,comp6,cleartrash,,j,y,z,,,,a
+test_015,comp1,openmail,,x,y,z,p,,,
+test_016,comp5,deletemail,,i,y,z,,g,,
+test_017,comp7,createmail,,j,y,z,,,a,
+test_018,comp8,cleartrash,,j,y,z,,,,a
+test_019,comp6,openmail,,x,y,z,p,,,
+test_020,comp1,deletemail,,i,y,z,,g,,
+test_021,comp8,createmail,,j,y,z,,,a,
+test_022,comp6,cleartrash,,j,y,z,,,,a
+test_023,comp1,openmail,,x,y,z,p,,,
+test_024,comp1,deletemail,,i,y,z,,g,,
+test_025,comp1,createmail,,j,y,z,,,a,
+test_026,comp2,cleartrash,,j,y,z,,,,a
+test_027,comp8,openmail,,x,y,z,p,,,
+test_028,comp3,deletemail,,i,y,z,,g,,
+test_029,comp8,createmail,,j,y,z,,,a,
+test_030,comp8,cleartrash,,j,y,z,,,,a

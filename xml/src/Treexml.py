@@ -4,6 +4,11 @@ import xml.dom.minidom
 dest = 'out.xml'
 
 def writeXML(ifr):
+    '''
+    generate the xml file
+    :param ifr: the xml file on memory
+
+    '''
     impl = xml.dom.minidom.getDOMImplementation()
     doc = impl.createDocument(None,'menu',None)
     
@@ -43,7 +48,13 @@ def writeElement(el, parent, doc):
 
 
 def depthsearch(root, id, tree):
-    print id
+    '''
+    goes to every option generating the parent and child of each element and return the complete xml
+    :param root: give the parent of the xml
+    :param id: the id element
+    :param tree: the xml that is on memory
+    :return: the element with the parent
+    '''
     for child in root:
         if child.attrib['id'] == id and child.tag == 'form':
                 
@@ -51,7 +62,7 @@ def depthsearch(root, id, tree):
             
             for child2 in child:
                 if child2.tag == 'goto':
-                    depthsearch(root, child2.attrib['id'], xmlchild)
+                    depthsearch(root, child2.attrib['id'], xmlchild)  # I use recusivity to have all the xml on memory
                 elif child2.tag == 'oneof':
                     xmloneof = ET.SubElement(xmlchild, child2.tag, child2.attrib)
                     for option in child2:
@@ -66,6 +77,6 @@ root = treexml.getroot()
 
 roottree = ET.Element('menu')
     
-roottree=depthsearch(root,root[0].attrib['id'],roottree)
+roottree = depthsearch(root,root[0].attrib['id'], roottree)  # generate the xml tree with the corresponting menu and submenus
 
-writeXML(roottree)
+writeXML(roottree)  # generate the out.xml file of the xml that is on memory

@@ -5,12 +5,12 @@ import re
 
 
 def delete_row(row):
-    if row[14] == "DONT_CARE" or row[16] == "DONT_CARE":
+    if row[14] == "DONT_CARE" or row[16] == "DONT_CARE":  # delete the rows that have dont care on the column 15 and 17
         return True
     
-    knowords = ['PCI']
+    knowords = ['PCI']  # delete the row if the knowords are on column1, need to be equal, its case sensitive
     
-    rege = ['CPU']
+    rege = ['CPU']  # delete the row if the rege are on column1, use regular expression
     
     for word in knowords:
         if row[0] == word:
@@ -20,9 +20,9 @@ def delete_row(row):
         if re.search(reg, row[0]):
             return True
         
-    knowords = ['xxx']
+    knowords = ['xxx']  # delete the row if the knowords are on column10, need to be equal, its case sensitive
     
-    rege = []
+    rege = []  # delete the row if the rege are on column10, use regular expression
     
     for word in knowords:
         if row[9] == word:
@@ -32,9 +32,9 @@ def delete_row(row):
         if re.search(reg, row[9]):
             return True
         
-    knowords = ['xxx']
+    knowords = ['xxx']  # delete the row if the knowords are on column11, need to be equal, its case sensitive
     
-    rege = ['y']
+    rege = ['y']  # delete the row if the rege are on column11, use regular expression
     
     for word in knowords:
         if row[10] == word:
@@ -67,6 +67,7 @@ def main():
                     for row in reader:
                         if not delete_row(row):
                             for column in row:
+                                # delete column 4, 5, 9, 10, 13, 16 and 18
                                 if aux == 3 or aux == 4 or aux == 8 or aux == 9 or aux == 12 or aux == 15 or aux == 17:
                                     aux += 1
                                     continue
