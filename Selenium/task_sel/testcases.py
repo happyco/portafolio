@@ -2,6 +2,8 @@ import unittest
 from objects.Enviroment import _singletonEnviroment
 import Tinbox, Tlogin
 
+# This is an approach with unittest, testing each test case from the beginning, there is another approaches
+
 
 class TestCase(unittest.TestCase):
 
