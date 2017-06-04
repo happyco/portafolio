@@ -1,18 +1,12 @@
 package elements;
+
+import Environment.Environment;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class oLogIn {
-    public WebDriver driver = null;
-
-    public void setDriver(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    public WebDriver getDriver() {
-        return driver;
-    }
+    public WebDriver driver = Environment.getInstance().driver;
 
     public WebElement obUSerTxt(){
         return this.driver.findElement(By.id("email"));
@@ -23,11 +17,12 @@ public class oLogIn {
     }
 
     public WebElement obButton(){
-        return this.driver.findElement(By.xpath("'//*[@id=\"form_login\"]/button'"));
+        return this.driver.findElement(By.id("form_login"));
+
     }
 
-    public By obUserErr(){
-        return By.id("email-error");
+    public WebElement obUserErr(){
+        return this.driver.findElement(By.id("email-error"));
     }
 
 }

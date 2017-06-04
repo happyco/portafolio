@@ -1,5 +1,6 @@
 package tasks;
 
+import Environment.Environment;
 import org.openqa.selenium.WebDriver;
 import elements.oLogIn;
 import org.openqa.selenium.WebElement;
@@ -8,17 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class tLogIn {
-    public WebDriver driver = null;
+    public WebDriver driver = Environment.getInstance().driver;
     oLogIn elem = new oLogIn();
-
-    public void setDriver(WebDriver driver) {
-        this.driver = driver;
-        elem.setDriver(this.driver);
-    }
-
-    public WebDriver getDriver() {
-        return driver;
-    }
 
     public void go (String site){
         this.driver.get(site);
@@ -33,10 +25,10 @@ public class tLogIn {
     }
 
     public void clickButton(){
-        elem.obButton().click();
+        elem.obButton().submit();
     }
 
     public WebElement checkUserErr(){
-        return new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(elem.obButton()));
+        return new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(elem.obUserErr()));
     }
 }
