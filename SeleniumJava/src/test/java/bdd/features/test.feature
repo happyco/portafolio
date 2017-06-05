@@ -1,4 +1,4 @@
-Feature: Failed login
+Feature: 
   as a user
 
   Scenario: Login with nonexistent user

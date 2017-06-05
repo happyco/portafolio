@@ -4,6 +4,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java8.En;
 import tasks.tLogIn;
 import tasks.tMainP;
+import static org.junit.Assert.assertTrue;
 
 
 public class MyStepdefs implements En{
@@ -60,11 +61,11 @@ public class MyStepdefs implements En{
         });
         Then("^Get the brand list$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assertTrue("Could not get the list",taskMainP.getBrandList());
         });
         Then("^Check the brand list is correct$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assertTrue("There are difference between the ui list and the RESTlist",taskMainP.compareRestDropdown());
         });
 
     }

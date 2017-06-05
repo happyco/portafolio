@@ -23,7 +23,7 @@ public class testRunner {
 
     @AfterClass
     public static void tearDown(){
-        //Environment.getInstance().driver.close();
+        Environment.getInstance().driver.close();
 
     }
 }
