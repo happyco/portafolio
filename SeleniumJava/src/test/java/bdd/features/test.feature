@@ -1,5 +1,6 @@
-Feature: 
-  as a user
+Feature: Test webpage
+  as a user we can select brand
+  get prices from different brands
 
   Scenario: Login with nonexistent user
     Given The webpage "https://subastas.carmatch.mx/login"
