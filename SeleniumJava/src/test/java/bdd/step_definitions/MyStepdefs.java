@@ -2,6 +2,7 @@ package bdd.step_definitions;
 
 import cucumber.api.PendingException;
 import cucumber.api.java8.En;
+import org.junit.Assert;
 import tasks.tLogIn;
 import tasks.tMainP;
 import static org.junit.Assert.assertTrue;
@@ -57,7 +58,7 @@ public class MyStepdefs implements En{
         });
         Then("^I verify the brand is the one I selected$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assertTrue("Verify fail, brand model and year not found",taskMainP.verifySell());
         });
         Then("^Get the brand list$", () -> {
             // Write code here that turns the phrase above into concrete actions

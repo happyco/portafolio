@@ -2,12 +2,9 @@ package tasks;
 
 import Environment.Environment;
 import elements.oMainP;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -15,6 +12,7 @@ public class tMainP {
     public WebDriver driver = Environment.getInstance().driver;
     oMainP elem = new oMainP();
     Set<String> data = new TreeSet<String>();
+    String brand = null, model = null, year = null;
 
     public void selectBrand (String brand){
         WebElement i = null;
@@ -27,35 +25,55 @@ public class tMainP {
         }
 
         i.click();
+        this.brand = brand;
 
     }
 
     public void selectModel (String model){
         WebElement i = null;
         for (WebElement element: this.elem.obModel()) {
-            if (element.getText() == model){
+            if (element.getText().equals(model)){
                 i = element;
                 break;
             }
 
         }
         i.click();
+        this.model = model;
     }
 
     public void selectYear (String year){
         WebElement i = null;
         for (WebElement element: this.elem.obYear()) {
-            if (element.getText() == year){
+            if (element.getText().equals(year)){
                 i = element;
                 break;
             }
 
         }
         i.click();
+        this.year = year;
     }
 
     public void clickCot (){
         this.elem.obCotButton().click();
+    }
+
+    public Boolean verifySell(){
+        String check = this.brand + " " + this.model + " "+ this.year;
+
+        if (this.brand != null & this.model != null & this.year != null){
+
+            for (WebElement element : this.elem.obTextSell()) {
+                if (element.getText().equals(check)) {
+                    return Boolean.TRUE;
+                }
+
+                System.out.println(element.getText());
+
+            }
+        }
+        return Boolean.FALSE;
     }
 
     public Boolean getBrandList(){
